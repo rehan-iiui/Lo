@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Civilizations Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">🏺</div>
+            <div>
+                <h1>Lost Civilizations</h1>
+                <p>Explore • Discover • Remember</p>
+            </div>
+        </div>
+
+        <nav>
+            <button class="nav-btn active" data-section="home">Home</button>
+            <button class="nav-btn" data-section="explore">Explore</button>
+            <button class="nav-btn" data-section="favorites">Favorites</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="section active">
+
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="eyebrow">ANCIENT WORLD</span>
+
+                    <h2>Discover the civilizations<br>that shaped history.</h2>
+
+                    <p>
+                        Travel through time and explore ancient societies,
+                        mysterious cities, remarkable inventions, powerful
+                        rulers, and cultures that eventually disappeared.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button id="exploreBtn" class="primary-btn">
+                            Explore Civilizations
+                        </button>
+
+                        <button id="randomBtn" class="secondary-btn">
+                            🎲 Random Civilization
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <div>
+                    <span class="small-label">FEATURED</span>
+                    <h2>Featured Civilizations</h2>
+                </div>
+
+                <button id="viewAllBtn" class="text-btn">
+                    View All →
+                </button>
+            </div>
+
+            <div id="featuredGrid" class="civilization-grid"></div>
+
+        </section>
+
+
+        <!-- EXPLORE -->
+        <section id="explore" class="section">
+
+            <div class="page-heading">
+                <span class="small-label">EXPLORE HISTORY</span>
+                <h2>Lost Civilizations</h2>
+                <p>
+                    Search and explore civilizations from different
+                    regions and periods of the ancient world.
+                </p>
+            </div>
+
+            <div class="controls">
+
+                <div class="search-box">
+                    <span>🔎</span>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search civilizations..."
+                    >
+                </div>
+
+                <select id="categoryFilter">
+                    <option value="all">All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Middle East">Middle East</option>
+                </select>
+
+                <button id="randomExploreBtn" class="secondary-btn">
+                    🎲 Random
+                </button>
+
+            </div>
+
+            <div id="exploreGrid" class="civilization-grid"></div>
+
+            <div id="noResults" class="no-results hidden">
+                <div>🏺</div>
+                <h3>No civilizations found</h3>
+                <p>Try another search or category.</p>
+            </div>
+
+        </section>
+
+
+        <!-- FAVORITES -->
+        <section id="favorites" class="section">
+
+            <div class="page-heading">
+                <span class="small-label">YOUR COLLECTION</span>
+                <h2>Favorite Civilizations</h2>
+                <p>
+                    Keep the civilizations you want to explore again.
+                </p>
+            </div>
+
+            <div id="favoritesGrid" class="civilization-grid"></div>
+
+            <div id="emptyFavorites" class="empty-state">
+                <div class="empty-icon">☆</div>
+                <h3>No Favorites Yet</h3>
+                <p>
+                    Open a civilization and press the star button
+                    to save it here.
+                </p>
+                <button id="discoverBtn" class="primary-btn">
+                    Discover Civilizations
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- DETAILS -->
+        <section id="details" class="section">
+
+            <button id="backBtn" class="back-btn">
+                ← Back
+            </button>
+
+            <div id="detailsContent"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
